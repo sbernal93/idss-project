@@ -26,7 +26,7 @@ class Data:
         self.downsampled_x_without_outliers = self._gridsearch_classification(data=self.downsampled_data_without_outliers)
 
     def _get_bank_data(self):
-        bank = pd.read_csv('data/bank/bank-full.csv', sep=';')
+        bank = pd.read_csv('bank-full.csv', sep=';')
 
         bank_data = bank.copy()
         bank_data['poutcome'] = bank_data['poutcome'].replace(['unknown'] , 'other')
